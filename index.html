@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Asistencia</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📘 Registro de Asistencia</h1>
+    <p>Por favor completa tus datos correctamente</p>
+
+    <form id="asistenciaForm">
+      <label>Nombre y Apellido:</label>
+      <input type="text" id="nombre" required placeholder="Ej. Juan Pérez">
+
+      <label>Curso:</label>
+      <select id="curso" required>
+        <option value="">Seleccionar...</option>
+        <option>PRIMERO-SECUNDARIA</option>
+        <option>SEGUNDO-SECUNDARIA</option>
+        <option>TERCERO-SECUNDARIA</option>
+        <option>CUARTO-SECUNDARIA</option>
+        <option>QUINTO-SECUNDARIA</option>
+        <option>SEXTO-SECUNDARIA</option>
+      </select>
+
+      <label>Código de Asistencia:</label>
+      <input type="text" id="codigo" required placeholder="Ej. A1234">
+
+      <!-- Botón con spinner -->
+      <div class="send-container">
+        <center><button type="submit" class="btn-registrar">Registrar y Enviar</button></center>
+        <div id="loading" class="loading" style="display:none;">
+            <span class="spinner"></span>
+            <span class="loading-text">⏳ Procesando tu envío...</span>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal de éxito -->
+  <div id="modalExito" class="modal">
+    <div class="modal-content">
+      <h3>✅ Registro exitoso</h3>
+      <p>Se registró correctamente la asistencia del estudiante.</p>
+      <div class="modal-buttons">
+        <button id="btnDescargar">📄 Descargar PDF</button>
+        <button id="btnCerrar">❌ Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="asistencia.js"></script>
+</body>
+</html>
+
