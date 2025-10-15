@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnDescargar = document.getElementById("btnDescargar");
   const btnCerrar = document.getElementById("btnCerrar");
 
-  const SHEET_URL = "https://api.sheetbest.com/sheets/3f5fcdb4-4a15-42cb-a7ad-4c81b8a144ae";
+  const SHEET_URL = "https://api.sheetbest.com/sheets/55a0aaa8-ec4b-4f46-b5ce-eb56cbd66591";
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
