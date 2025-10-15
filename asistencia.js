@@ -97,8 +97,9 @@ function generarPDF(nombre, curso, codigo, fechaHora) {
   doc.setFontSize(10);
   doc.setTextColor(100);
   doc.text("Gracias por registrar tu asistencia.", 105, 165, { align: "center" });
-  doc.text("Instituto Tecnológico Superior Mecapaca", 105, 172, { align: "center" });
+  doc.text("Unidad Educativa T.H.P. Jupapina", 105, 172, { align: "center" });
 
   // 💾 Descargar
   doc.save(`Comprobante_Asistencia_${nombre.replaceAll(" ", "_")}.pdf`);
 }
+
